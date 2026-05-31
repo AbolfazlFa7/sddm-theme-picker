@@ -1,0 +1,13 @@
+[project]
+name = "sddm-theme-picker"
+version = "0.1.0"
+description = "Browse, preview, and activate SDDM themes with an interactive CLI."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "rich>=15.0.0",
+    "typer>=0.25.1",
+]
+
+[project.scripts]
+sddmtheme = "main:app"
