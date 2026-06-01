@@ -83,7 +83,8 @@ def show_preview():
     result = change_metadata()
     if result == 201:
         console.print("[bold green]metadata.desktop get updated![/bold green]")
-        subprocess.run(command.split())
+        subprocess.run(command.split(), stdout=subprocess.DEVNULL,
+                       stderr=subprocess.DEVNULL)
         theme = DATA["step_2"]["theme"]
 
         DATA["visited_theme"].append(theme)
@@ -129,7 +130,7 @@ def main():
                 arr_themes.sort()
                 DATA["step_2"] = {
                     "id": chosen_theme,
-                    "theme": arr_themes[int(chosen_theme)][0]
+                    "theme": arr_themes[int(chosen_theme) - 1][0]
                 }
                 print(DATA["step_2"])
 
