@@ -132,7 +132,6 @@ def main():
                     "id": chosen_theme,
                     "theme": arr_themes[int(chosen_theme) - 1][0]
                 }
-                print(DATA["step_2"])
 
         if not DATA.get("step_3"):
             result = show_preview()

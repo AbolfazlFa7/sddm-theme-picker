@@ -2,19 +2,27 @@ from configparser import ConfigParser
 from pathlib import Path
 import sys
 
-def fix_sddm_conf(backup = True):
-    config_path = Path("/etc/sddm.conf")
+
+def fix_sddm_conf(backup=True):
+    config_path = Path("toch.py")
     backup_config_path = config_path.with_name(f"_{config_path.name}")
-    
+
     config = ConfigParser()
-    config.optionxform = str # preserve original case
-    config.read(config_path)
-    config.set("Theme","Current",".")
+    config.optionxform = str  # preserve original case
+
+    if config_path.exists():
+        config.read(config_path)
+    else:
+        config_path.touch()
+        config.add_section("Theme")
+
+    config.set("Theme", "Current", ".")
 
     if not backup_config_path.exists():
         config_path.move(backup_config_path)
     with open(config_path, 'w') as f:
         config.write(f)
+
 
 def change_metadata(theme: str):
     theme = Path(theme)
@@ -40,7 +48,7 @@ def change_metadata(theme: str):
 
     with open(metadata_path, "w") as f:
         config.write(f)
-    
+
 
 if __name__ == "__main__":
     args = sys.argv
@@ -49,5 +57,3 @@ if __name__ == "__main__":
             fix_sddm_conf()
         elif args[1] == "metadata":
             change_metadata(args[2])
-
-    
