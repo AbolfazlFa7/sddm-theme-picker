@@ -127,7 +127,7 @@ def main():
                 continue
             else:
                 arr_themes = list(themes.items())
-                arr_themes.sort()
+                arr_themes.sort(key=lambda x: x[1]["name"])
                 DATA["step_2"] = {
                     "id": chosen_theme,
                     "theme": arr_themes[int(chosen_theme) - 1][0]

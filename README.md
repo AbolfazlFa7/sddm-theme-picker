@@ -1,6 +1,6 @@
 # SDDM Theme Picker
 
-[preview.webm](https://github.com/user-attachments/assets/2aa82ed7-7412-4317-9fbf-d7cd38859b5e)
+[preview.webm](https://github.com/user-attachments/assets/87813fec-be65-46be-94d1-571afcc4316f)
 
 A very simple CLI tool to browse, preview, and activate SDDM themes interactively.
 
