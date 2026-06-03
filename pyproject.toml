@@ -4,10 +4,28 @@ version = "0.1.0"
 description = "Browse, preview, and activate SDDM themes with an interactive CLI."
 readme = "README.md"
 requires-python = ">=3.14"
+
+authors = [
+    { name = "Abolfazl" }
+]
+
+keywords = ["sddm", "theme", "linux", "cli"]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: POSIX :: Linux",
+    "Environment :: Console",
+]
+
 dependencies = [
     "rich>=15.0.0",
     "typer>=0.25.1",
 ]
+
+[project.urls]
+Homepage = "https://github.com/AbolfazlFa7/sddm-theme-picker"
+Repository = "https://github.com/AbolfazlFa7/sddm-theme-picker"
+Issues = "https://github.com/AbolfazlFa7/sddm-theme-picker/issues"
 
 [project.scripts]
 sddmtheme = "main:app"
