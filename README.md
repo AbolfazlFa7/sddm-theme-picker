@@ -2,17 +2,17 @@
 
 [preview.webm](https://github.com/user-attachments/assets/87813fec-be65-46be-94d1-571afcc4316f)
 
-A very simple CLI tool to browse, preview, and activate SDDM themes interactively.
+A simple CLI tool to browse, preview, and activate installed SDDM themes interactively.
 
-With this tool, you can easily download themes from anywhere, install them as usual, and manage them from a single interface. Find any theme you like and use it exactly as you want.
+**SDDM Theme Picker does not download or install themes for you.** Instead, it provides a convenient interface for managing themes that you have already downloaded and installed from any source. Simply install your favorite SDDM themes as usual, then use this tool to preview and switch between them with ease.
 
 ## Features
 
-- Browse available SDDM theme packages
-- Preview themes before applying
-- Set a theme on your system with one command
-- Works with themes downloaded from any source
-- Interactive prompts for selection and confirmation
+- Browse installed SDDM themes
+- Preview themes before applying them
+- Activate a theme with a simple interactive workflow
+- Works with themes obtained from any source
+- Lightweight and easy to use
 
 ## Installation
 
@@ -26,10 +26,19 @@ pip install sddm-theme-picker
 sddmtheme
 ```
 
-Follow the prompts to select a package and theme. You can preview the theme and decide whether to set it as active.
+After installing your preferred SDDM themes, run the command above to browse available themes, preview them, and select the one you want to use.
 
 ## Notes
 
-- This project is intended to be simple and lightweight.
+- This tool only manages themes that are already installed on your system.
+- Theme installation must be done separately.
 - Requires Python >= 3.14.
 - Works on systems with SDDM installed.
+
+---
+
+## ⭐ Star the Project
+
+If you find this project useful, consider starring it on GitHub.
+
+Your support helps others discover the project and motivates future development.
